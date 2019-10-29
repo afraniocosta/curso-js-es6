@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+<script>
+
+    const usuario = {
+        nome: 'Afranio',
+        idade: 41,
+        endereco: {
+            rua: 'andesita',
+            bairo: 'união'
+        }
+    }    
+
+
+    // const { nome, idade, endereco: { rua } } = usuario
+
+    function mostraNome( usuario ){
+        console.log(usuario.nome)
+    }
+
+    function mostraNome( { nome, idade } ){
+        console.log(nome, idade)
+    }
+
+    mostraNome(usuario)
+
+    console.log( nome )
+    console.log( idade )
+    console.log( rua )
+
+</script>    
+    
+</body>
+</html>

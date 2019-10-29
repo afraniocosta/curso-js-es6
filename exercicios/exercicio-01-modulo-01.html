@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Classes</title>
+</head>
+<body>
+
+  <script>
+    
+    class Usuario{
+      constructor(){
+       
+        this.email = email,
+        this.senha = senha
+    }
+
+      isAdmin(){
+        isAdmin = false
+      }
+    }
+    
+    
+    class Admin extends Usuario{
+      super()
+      constructor(){
+        this.email = 'email@teste.com'
+        this.senha = 'senha123'
+      }
+      
+    }
+    
+    const Usuario = new Usuario('email@teste.com', 'senha123');
+    const Admin = new Admin('email@teste.com', 'senha123');
+   
+
+
+
+    console.log(Usuario.isAdmin()) // false
+    console.log(Admin.isAdmin()) // true
+
+  </script>
+
+    
+
+    
+</body>
+</html>
