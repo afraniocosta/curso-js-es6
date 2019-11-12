@@ -1,37 +1,27 @@
-import axios from 'axios';
+class App {
+  constructor(){
+      this.repositories = [];
 
-class Api {
-    static async getUserInfo(username){
-        try {
-        const response = await axios.get(`https://api.github.com/users/${username}`);
-        console.log(response);
-        } catch (err) {
-            console.warn('Erro na API');
-        }
-    }
+      this.formEl = document.getElementById('repo-form');
+      this.registerHandlers();
+
+  }
+
+  registerHandlers(){
+      this.formEl.onsubmit = event => this.addRepository(event);
+  }
+
+  addRepository(event) {
+      event.preventDefault();
+
+      this.repositories.push({
+          name: 'rocketseat.com.br',
+          description: 'Tire a sua idéia do papel e dê vida à sua startup',
+          avatar_url: 'https://avatars0.githubusercontent.com/u/28929274?v=',
+          html_url: 'http://github.com/rocketseat/rocketseat.com.br'
+      }); 
+      console.log(this.repositories);
+  }
 }
 
-Api.getUserInfo('diego3d');
-
-
-// promise comum. Uma forma de fazer com que uma coisa demore para executar. É um delay, um asincronismo.
- 
-// const minhaPromise = () => new Promise((resolve, reject) => {
-//     setTimeout(() => { resolve('OK') }, 2000);
-// });
-
-// minhaPromise().then(response=>{
-//     console.log(response)
-// })
-// .catch(err => {
-
-// });
-
-// abaixo segue a sintaxe do asyc await
-
-// async function executaPromise(){
-//     const response = await minhaPromise();
-//     console.log(response);
-// }
-
-// executaPromise();
+ new App();
