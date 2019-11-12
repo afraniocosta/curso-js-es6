@@ -3,6 +3,7 @@ class App {
       this.repositories = [];
 
       this.formEl = document.getElementById('repo-form');
+      this.listEl = document.getElementById('repo-list')
       this.registerHandlers();
 
   }
@@ -20,8 +21,17 @@ class App {
           avatar_url: 'https://avatars0.githubusercontent.com/u/28929274?v=',
           html_url: 'http://github.com/rocketseat/rocketseat.com.br'
       }); 
-      console.log(this.repositories);
+      
+      this.render(){
+
+      }
   }
+
+  render(){
+    this.listEl.innerHTML = '';
+
+  }
+
 }
 
  new App();
