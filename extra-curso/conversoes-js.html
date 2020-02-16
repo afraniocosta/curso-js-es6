@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fundamentos JS</title>
+</head>
+<body>
+    
+<script>
+
+    /*Math.round(): arredonda o number para o valor mais próximo*/
+    let number = Math.round(1.56)
+    console.log(number)
+
+    let value = 2.6
+    let arredondando = Math.round(value)
+    console.log(arredondando)
+
+    /*parseFloat: Serve para converter string em number com ponto flutuante 
+    (casas após a virgula em português, no caso do javascript o ponto).*/
+
+    let valorStr = '50.5';
+    let valorNum = 50.5;
+    let parseValorStr = parseFloat(valorStr)
+    console.log(typeof(valorStr))
+    console.log(typeof(parseValorStr))
+
+    /*LowerCase: converte string para minúsculo*/
+    let name = 'AFRÂNIO'
+    let nameLowerCase = name.toLowerCase()
+    console.log(nameLowerCase)
+
+    /*UpperCase: converte string para maiúsculo*/
+    let peopleName = 'afrânio'
+    let nameUpperCase = peopleName.toUpperCase()
+    console.log(nameUpperCase)
+
+</script>
+
+</body>
+</html>
